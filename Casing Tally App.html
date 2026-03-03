@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- saved from url=(0056)file:///C:/Users/kinab/Downloads/casing-tally%20(1).html -->
+<!-- saved from url=(0043)file:///C:/Users/kinab/Downloads/index.html -->
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -240,7 +240,7 @@
     </div>
   </div>
 
-  <div class="card" id="queue-card" style="display: none;">
+  <div class="card" id="queue-card" style="display:none;">
     <div class="card-title">📦 Unsaved Queue — <span id="queue-count">0</span> joints</div>
     <div class="alert alert-info">Review below, then click <strong>Save All to Tally</strong> when ready.</div>
     <div class="table-wrap">
@@ -265,24 +265,24 @@
     <p>Auto-generated from all saved joints. Export to CSV or print to PDF.</p>
   </div>
   <div class="stat-grid">
-    <div class="stat-box"><div class="stat-val" id="stat-joints">3</div><div class="stat-lbl">Total Joints</div></div>
-    <div class="stat-box"><div class="stat-val" id="stat-length">37.550</div><div class="stat-lbl">Total Length (m)</div></div>
-    <div class="stat-box"><div class="stat-val" id="stat-avg">12.517</div><div class="stat-lbl">Avg Joint Length (m)</div></div>
-    <div class="stat-box"><div class="stat-val" id="stat-planned">500.00</div><div class="stat-lbl">Planned Depth (m)</div></div>
+    <div class="stat-box"><div class="stat-val" id="stat-joints">0</div><div class="stat-lbl">Total Joints</div></div>
+    <div class="stat-box"><div class="stat-val" id="stat-length">0.000</div><div class="stat-lbl">Total Length (m)</div></div>
+    <div class="stat-box"><div class="stat-val" id="stat-avg">—</div><div class="stat-lbl">Avg Joint Length (m)</div></div>
+    <div class="stat-box"><div class="stat-val" id="stat-planned">—</div><div class="stat-lbl">Planned Depth (m)</div></div>
   </div>
 
-  <div class="card" id="progress-card" style="display: block;">
+  <div class="card" id="progress-card" style="display:none;">
     <div class="card-title">📊 Depth Progress</div>
     <div style="background:#e5e7eb;border-radius:20px;height:22px;overflow:hidden;margin-bottom:8px;">
-      <div id="progress-bar" style="height: 100%; background: var(--accent); width: 7.5%; transition: width 0.5s; border-radius: 20px;"></div>
+      <div id="progress-bar" style="height:100%;background:var(--accent);width:0%;transition:width 0.5s;border-radius:20px;"></div>
     </div>
-    <div id="progress-label" style="font-size:0.85rem;color:var(--muted);text-align:right;">37.55 m of 500.00 m planned (7.5%)</div>
+    <div id="progress-label" style="font-size:0.85rem;color:var(--muted);text-align:right;"></div>
   </div>
 
   <div class="card">
     <div class="card-title">📄 Full Tally</div>
-    <div id="tally-empty" class="alert alert-info" style="display: none;">No joints saved yet. Go to the <strong>Joints</strong> tab to add measurements.</div>
-    <div class="table-wrap" id="tally-wrap" style="display: block;">
+    <div id="tally-empty" class="alert alert-info">No joints saved yet. Go to the <strong>Joints</strong> tab to add measurements.</div>
+    <div class="table-wrap" id="tally-wrap" style="display:none;">
       <table>
         <thead>
           <tr>
@@ -291,34 +291,10 @@
             <th>Grade</th><th>Connection</th><th>Remarks</th><th></th>
           </tr>
         </thead>
-        <tbody id="tally-tbody"><tr>
-      <td><strong>1</strong></td><td>111</td>
-      <td>12.450</td>
-      <td class="cumulative-col">12.450</td>
-      <td>—</td><td>60</td>
-      <td>P-110</td><td>Premium (VAM TOP)</td>
-      <td>—</td>
-      <td><button class="btn btn-danger btn-sm" onclick="deleteJoint(0)">✕</button></td>
-    </tr><tr>
-      <td><strong>2</strong></td><td>112</td>
-      <td>12.500</td>
-      <td class="cumulative-col">24.950</td>
-      <td>—</td><td>60</td>
-      <td>P-110</td><td>Premium (VAM TOP)</td>
-      <td>—</td>
-      <td><button class="btn btn-danger btn-sm" onclick="deleteJoint(1)">✕</button></td>
-    </tr><tr>
-      <td><strong>3</strong></td><td>113</td>
-      <td>12.600</td>
-      <td class="cumulative-col">37.550</td>
-      <td>—</td><td>60</td>
-      <td>P-110</td><td>Premium (VAM TOP)</td>
-      <td>—</td>
-      <td><button class="btn btn-danger btn-sm" onclick="deleteJoint(2)">✕</button></td>
-    </tr></tbody>
+        <tbody id="tally-tbody"></tbody>
       </table>
     </div>
-    <div class="btn-row" id="export-row" style="display: flex;">
+    <div class="btn-row" id="export-row" style="display:none;">
       <button class="btn btn-success" onclick="exportCSV()">📥 Export CSV</button>
       <button class="btn btn-primary" onclick="window.print()">🖨️ Print / PDF</button>
       <button class="btn btn-danger btn-sm" onclick="clearTally()">🗑️ Clear All</button>
